@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White Image Processor</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido a ¡black and white!</h2>
+        <p>Black and white es una web donde podras convertir tus imagenes a blanco y negro , puedes probar escribiendo la URL de la imagen que quieres convertir a continuacion:</p>
+        <form action="/process-image" method="post">
+            <label for="imageUrl">Ingresa aqui la URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" required>
+            <button type="submit">Procesar Imagen</button>
+            <button type="button" id="clearButton">Limpiar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('imageUrl').value = '';
+        });
+    </script>
+</body>
+</html>
