@@ -21,7 +21,7 @@ app.post('/process-image', async (req, res) => {
 
     try {
         const image = await Jimp.read(imageUrl);
-        const fileName = `${uuidv4()}.jpg`;
+        const fileName = `${uuidv4().slice(0, 8)}.jpg`;
         const filePath = path.join(__dirname, 'uploads', fileName);
 
         await image
